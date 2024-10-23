@@ -124,7 +124,7 @@ the famous place  {Fore.RED} {place}
             country = countries_list[country_index]
             print(f'''
             The famous place {place} is located in: {country}
-            {Style.BRIGHT}Well done!
+            {Style.BRIGHT}Well done!{Fore.GREEN}
             ''')
             player_score += 1
         else:
