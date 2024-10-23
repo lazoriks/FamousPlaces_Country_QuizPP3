@@ -19,7 +19,7 @@ def ask_name():
     """
     player_name = input('Please enter your Username.\n')
     if not player_name.strip():
-        player_name = "Superuser"        
+        player_name = "Superuser"
     print(f'''
     {Fore.GREEN}Welcome to
     {Fore.YELLOW}The Famous Places and Countries game,
@@ -40,11 +40,15 @@ def handle_quit(user_input, score, questions_answered_count):
             print(f'''
 {Fore.BLUE}Your score is
 {Fore.RED}{score} {Style.RESET_ALL}out of {questions_answered_count}
+Thanks for enjoying my little Python terminal game!
+Come back for more!
 ''')
         else:
             print(f'''
 {Fore.BLUE}Your score is {Fore.GREEN}{score}
- {Style.RESET_ALL}out of {questions_answered_count}
+{Style.RESET_ALL}out of {questions_answered_count}
+Thanks for enjoying my little Python terminal game!
+Come back for more!
  ''')
         quit()
     else:
@@ -124,7 +128,7 @@ the famous place  {Fore.RED} {place}
             country = countries_list[country_index]
             print(f'''
             The famous place {place} is located in: {country}
-            {Style.BRIGHT}Well done!{Fore.GREEN}
+            {Style.BRIGHT}Well done!{Style.RESET_ALL}{Fore.GREEN}
             ''')
             player_score += 1
         else:
