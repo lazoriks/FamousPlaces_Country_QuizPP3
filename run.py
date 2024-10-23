@@ -18,7 +18,8 @@ def ask_name():
     Asking Username for conecting
     """
     player_name = input('Please enter your Username.\n')
-    sleep(2)
+    if not player_name.strip():
+        player_name = "Superuser"        
     print(f'''
     {Fore.GREEN}Welcome to
     {Fore.YELLOW}The Famous Places and Countries game,
@@ -73,6 +74,11 @@ For example, France, Great Britain.\n
 {Fore.RED}You entered a name
 with a number!{Fore.GREEN}
 ''')
+            elif not answer.strip():
+                print(f'''
+                {Fore.RED}You entered an empty string or only spaces!
+                {Fore.GREEN}Try again!
+                ''')
             else:
                 return answer
         except TypeError as e:
@@ -110,7 +116,6 @@ def play_game():
 the famous place  {Fore.RED} {place}
 {Fore.GREEN}located?
 ''')
-        sleep(1)
         player_answer = validate_response()
 
         qu_ansd_ind.append(country_index)
