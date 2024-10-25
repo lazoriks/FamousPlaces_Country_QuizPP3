@@ -24,7 +24,7 @@ def ask_name():
     {Fore.GREEN}Welcome to
     {Fore.YELLOW}The Famous Places and Countries game,
     {Fore.BLUE}{player_name}!
-    {Fore.GREEN}And.......question...
+    {Fore.GREEN}You have 10 questions...
     ''')
     return player_name
 
@@ -137,10 +137,10 @@ the famous place  {Fore.RED} {place}
             Hint: Next time check your spelling{Fore.GREEN}
             ''')
 
-        if len(qu_ansd_ind) == len(places_list):
+        if len(qu_ansd_ind) == 10:
             question_count = len(qu_ansd_ind)
             print(f'Your score is {player_score} out of {question_count}')
-            play = input('GAME OVER, press Y to start again or N to quit:\n')
+            play = input(f'{Style.BRIGHT}GAME OVER{Style.RESET_ALL}, press Y to start again or N to quit:\n')
             handle_quit(play, player_score, len(qu_ansd_ind))
             player_score = 0
             qu_ansd_ind.clear()

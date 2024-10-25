@@ -13,6 +13,7 @@ The Famous Places and Countries game is an interactive educational quiz designed
   1. Press the orange button - ‘Start the program’ and the terminal window will open. 
   1. We are greeted with a welcome speech. ![Welcome](assets/images/welcome.png).
   1. After entering your username, you can start playing the game.
+  1. You have 10 questions.
   1. And so we get the first question about the Most Famous Place in the World and we have to guess in which country it is located. 
   1. ![Question](assets/images/question.png)
   1. The game is to write the correct country where the Famous Place is located. You will receive a message from the game for your answer. 
