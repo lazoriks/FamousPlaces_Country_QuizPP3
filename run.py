@@ -140,13 +140,10 @@ the famous place  {Fore.RED} {place}
         if len(qu_ansd_ind) == len(places_list):
             question_count = len(qu_ansd_ind)
             print(f'Your score is {player_score} out of {question_count}')
-            play = input('Game ended, press Y to start again or N to quit:\n')
+            play = input('GAME OVER, press Y to start again or N to quit:\n')
             handle_quit(play, player_score, len(qu_ansd_ind))
             player_score = 0
             qu_ansd_ind.clear()
-        else:
-            play = input('To continue playing enter Y; or N to quit\n')
-            handle_quit(play, player_score, len(qu_ansd_ind))
 
 
 def main():
