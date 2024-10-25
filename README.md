@@ -1,31 +1,111 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Terminal Game Famous Places and Countries Quiz
 
-Welcome,
+![Responsive Mockup](assets/images/validated.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+*The link to [Famous Places and Countries Quiz](https://famous-places-75dcf37b0e17.herokuapp.com/)*
 
-## Reminders
+The Famous Places and Countries game is an interactive educational quiz designed to help users learn about famous places and countries around the world and test their knowledge of them.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+---
 
-## Creating the Heroku app
+## How to play:
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+  1. Press the orange button - ‘Start the program’ and the terminal window will open. 
+  1. We are greeted with a welcome speech. ![Welcome](assets/images/welcome.png).
+  1. After entering your username, you can start playing the game.
+  1. And so we get the first question about the Most Famous Place in the World and we have to guess in which country it is located. 
+  1. ![Question](assets/images/question.png)
+  1. The game is to write the correct country where the Famous Place is located. You will receive a message from the game for your answer. 
+  1. ![CorestAnswer](assets/images/corectuncorect.png)
+  1. At the end of the game, you will receive statistics on your correct answers.
+  1. ![Finish](assets/images/finish.png)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+---
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## User Experience
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### First-Time User Experience
 
-Connect your GitHub repository and deploy as normal.
+Users visiting the site for the first time are offered a simple and intuitive process for setting up their gaming preferences. Clear instructions and an easy-to-navigate interface ensure a seamless experience.
 
-## Constraints
+### Returning User
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+Returning users
+
+### User Stories (PP4 & PP5)
+
+- As a potential client, I want to understand the expertise of the developer in creating interactive and educational games.
+- As a visitor, I want a visually appealing and easy-to-navigate site.
+- As a user interested in educational games, I want detailed information about each feature and how to use it.
+
+---
+
+## Features
+  
+- **Interactive gameplay**: Users can guess the names of various landmarks.
+- **Instant feedback**: Users receive feedback on their answers.
+- **Global places**: The game features a diverse set of landmarks from around the world.
+
+---
+
+## Technologies Used
+
+### Languages:
+
+- [Python 3.8.5](https://www.python.org/downloads/release/python-385/): used to anchor the project and direct all application behavior
+
+- [JavaScript](https://www.javascript.com/): used to provide the start script needed to run the Code Institute mock terminal in the browser
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) used to construct the elements involved in building the mock terminal in the browser
+
+- [GIMP](https://www.gimp.org/) was used to make and resize images for the README file.
+
+- [Python tutorials](https://www.w3schools.com/python) was used about tutorials for Python
+
+### Frameworks/Libraries, Programmes and Tools:
+#### Python modules/packages:
+
+##### Standard library imports:
+
+- [random](https://docs.python.org/3/library/random.html) was used to implement pseudo-random number generation.
+- [os](https://docs.python.org/3/library/os.html ) was used to clear the terminal before running the program.
+
+##### Third-party imports:
+
+- [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/) was used to implement the menu.
+- [Colorama](https://pypi.org/project/colorama/) was used to add colors and styles to the project.
+
+#### Other tools:
+
+- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) was used for the version control of the website.
+- [GitHub](https://github.com/) was used to host the code of the website.
+- [Node.js](https://nodejs.org/) and npm (if using JavaScript/Node for frontend or backend)
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) for deployment
+
+---
+
+## Deployment
+
+- The program was deployed to [Heroku](https://dashboard.heroku.com).
+
+---
+## Credits
+
+### Content and text
+
+* Main information from [Youtube video for example](https://www.youtube.com/watch?v=zehwgTB0vV8)
+* Many info  [Build a Quiz Application With Python](https://realpython.com/python-quiz-application/)
+
+### Media
+
+* Open sites and sources of images and emblems
+* Code institute for the deployment process
+* Translated with www.DeepL.com/Translator and Grammarly for Windows
+
+### Acknowledgements
+* Special thanks to [Laura Mayock](https://www.linkedin.com/in/laura-mayock/) and [Julia Konovalova](https://github.com/IuliiaKonovalova) for the call and conversation that helped me, after the first unsuccessful attempt, to find the strength in the first place and to understand my shortcomings in the project and complete it. 
+* Code Institute tutors and Slack community members for their support and help.
 
 ---
 
