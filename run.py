@@ -1,7 +1,7 @@
 import os
-from colorama import Fore, Style
 from random import randint
 from time import sleep
+from colorama import Fore, Style
 
 
 def read_file(file):
@@ -57,6 +57,9 @@ Come back for more!
 
 
 def generate_rand_int(data, upper_bound):
+    """
+    Generation random integer
+    """
     random_index = randint(0, upper_bound - 1)
     if random_index in data:
         return generate_rand_int(data, upper_bound)
@@ -64,6 +67,9 @@ def generate_rand_int(data, upper_bound):
 
 
 def validate_response():
+    """
+    Validation answer
+    """
     while True:
         response = input(f'''
 {Fore.GREEN}Please enter country name.
@@ -90,7 +96,6 @@ with a number!{Fore.GREEN}
 
 
 def play_game():
-
     """
     Main program function
     """
@@ -140,7 +145,9 @@ the famous place  {Fore.RED} {place}
         if len(qu_ansd_ind) == 10:
             question_count = len(qu_ansd_ind)
             print(f'Your score is {player_score} out of {question_count}')
-            play = input(f'{Style.BRIGHT}GAME OVER{Style.RESET_ALL}, press Y to start again or N to quit:\n')
+            play = input(f'''{Style.BRIGHT}GAME OVER{Style.RESET_ALL},
+                         press Y to start again or N to quit:\n
+                         ''')
             handle_quit(play, player_score, len(qu_ansd_ind))
             player_score = 0
             qu_ansd_ind.clear()
