@@ -105,6 +105,7 @@ def play_game():
     countries_list = read_file('countries.txt')
     player_score = 0
     qu_ansd_ind = []
+    qty_ques = 0
 
     ask_name()
     sleep(1)
@@ -112,7 +113,8 @@ def play_game():
         random_index = generate_rand_int(qu_ansd_ind, len(places_list))
         place = places_list[random_index]
         country_index = places_list.index(place)
-        print(f'''{Fore.LIGHTGREEN_EX}Question {qu_ansd_ind} of 10
+        qty_ques += 1
+        print(f'''{Fore.LIGHTGREEN_EX}Question {qty_ques} of 10
 {Fore.GREEN}In which country is
 the famous place  {Fore.RED} {place}
 {Fore.GREEN}located?
