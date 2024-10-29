@@ -5,20 +5,20 @@ from colorama import Fore, Style
 
 
 def read_file(file):
-    """
-    Reading file and return in lines
-    """
+    """Reading file and return in lines"""
     with open(file, 'r') as f:
         lines = f.readlines()
     return [line.strip() for line in lines]
 
 
 def ask_name():
-    """
-    Asking Username for conecting
-    """
+    """Asking Username for conecting"""
     player_name = input('Please enter your Username.\n')
     if not player_name.strip():
+        """**Default user name**:
+        if the user has not entered his name,
+        then we assign him Superuser.
+        """
         player_name = "Superuser"
     print(f'''
     {Fore.GREEN}Welcome to
@@ -30,9 +30,7 @@ def ask_name():
 
 
 def handle_quit(user_input, score, questions_answered_count):
-    """
-    Asking for quit or continue playing game
-    """
+    """Asking for quit or continue playing game"""
     if user_input.lower() == 'y':
         return
     elif user_input.lower() == 'n':
@@ -57,9 +55,7 @@ Come back for more!
 
 
 def generate_rand_int(data, upper_bound):
-    """
-    Generation random integer
-    """
+    """Generation random integer"""
     random_index = randint(0, upper_bound - 1)
     if random_index in data:
         return generate_rand_int(data, upper_bound)
@@ -67,9 +63,7 @@ def generate_rand_int(data, upper_bound):
 
 
 def validate_response():
-    """
-    Validation answer
-    """
+    """Validation answer"""
     while True:
         response = input(f'''
 {Fore.GREEN}Please enter country name.
@@ -96,9 +90,7 @@ with a number!{Fore.GREEN}
 
 
 def play_game():
-    """
-    Main program function
-    """
+    """Main program function"""
     # Clears the terminal
     os.system('cls' if os.name == 'nt' else 'clear')
     # Shows welcoming message
@@ -120,7 +112,7 @@ def play_game():
         random_index = generate_rand_int(qu_ansd_ind, len(places_list))
         place = places_list[random_index]
         country_index = places_list.index(place)
-        print(f'''
+        print(f'''{Fore.LIGHTGREEN_EX}Question {qu_ansd_ind} of 10
 {Fore.GREEN}In which country is
 the famous place  {Fore.RED} {place}
 {Fore.GREEN}located?
@@ -154,6 +146,7 @@ the famous place  {Fore.RED} {place}
 
 
 def main():
+    """Identification main program"""
     play_game()
 
 
